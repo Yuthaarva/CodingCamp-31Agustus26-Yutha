@@ -1,0 +1,718 @@
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   VARIABLES
+========================================= */
+
+:root {
+
+    --background-start: #6678dd;
+    --background-end: #754da0;
+
+    --card-background: #ffffff;
+
+    --text-color: #222222;
+    --secondary-text: #777777;
+
+    --primary-color: #687add;
+    --primary-hover: #586bd0;
+
+    --input-border: #aab3dd;
+
+    --danger-color: #ed6868;
+    --danger-hover: #db5555;
+
+    --button-background: #e8ebf3;
+
+    --shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================================
+   MODE HYTAM
+========================================= */
+
+body.nigg-mode {
+
+    --background-start: #17182d;
+    --background-end: #35234a;
+
+    --card-background: #242438;
+
+    --text-color: #eeeeee;
+    --secondary-text: #aaaaaa;
+
+    --button-background: #38384e;
+
+    --input-border: #55557a;
+
+    --shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+}
+
+
+/* =========================================
+   BODY
+========================================= */
+
+body {
+
+    min-height: 100vh;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    color: var(--text-color);
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--background-start),
+            var(--background-end)
+        );
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease;
+}
+
+
+/* =========================================
+   DASHBOARD
+========================================= */
+
+.dashboard {
+
+    width: 90%;
+
+    max-width: 625px;
+
+    margin: 7px auto;
+
+}
+
+
+/* =========================================
+   CARD
+========================================= */
+
+.card {
+
+    background: var(--card-background);
+
+    border-radius: 6px;
+
+    box-shadow: var(--shadow);
+
+    transition:
+        background 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.header-card {
+
+    min-height: 120px;
+
+    padding: 18px 20px;
+
+    text-align: center;
+
+    margin-bottom: 10px;
+
+    position: relative;
+}
+
+
+/* =========================================
+   THEME BUTTON
+========================================= */
+
+.theme-button {
+
+    position: absolute;
+
+    top: 10px;
+
+    right: 12px;
+
+    width: 28px;
+
+    height: 28px;
+
+    padding: 0;
+
+    border-radius: 50%;
+
+    background: var(--button-background);
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   CLOCK
+========================================= */
+
+.clock {
+
+    color: var(--primary-color);
+
+    font-size: 26px;
+
+    font-weight: 400;
+
+    line-height: 1.1;
+}
+
+
+/* =========================================
+   DATE
+========================================= */
+
+.date {
+
+    margin-top: 5px;
+
+    color: var(--secondary-text);
+
+    font-size: 9px;
+}
+
+
+/* =========================================
+   GREETING
+========================================= */
+
+#greeting {
+
+    margin-top: 9px;
+
+    font-size: 14px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================
+   NAME SECTION
+========================================= */
+
+.name-section {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 5px;
+
+    margin-top: 9px;
+}
+
+
+/* =========================================
+   INPUT
+========================================= */
+
+input {
+
+    height: 21px;
+
+    border: 1px solid var(--input-border);
+
+    border-radius: 3px;
+
+    padding: 4px 7px;
+
+    background: var(--card-background);
+
+    color: var(--text-color);
+
+    font-size: 9px;
+
+    outline: none;
+
+    transition:
+        border 0.2s ease,
+        background 0.2s ease;
+}
+
+
+input:focus {
+
+    border-color: var(--primary-color);
+}
+
+
+/* =========================================
+   BUTTON
+========================================= */
+
+button {
+
+    border: none;
+
+    border-radius: 3px;
+
+    padding: 6px 10px;
+
+    background: var(--button-background);
+
+    color: var(--text-color);
+
+    font-size: 9px;
+
+    cursor: pointer;
+
+    transition:
+        opacity 0.2s ease,
+        transform 0.1s ease,
+        background 0.2s ease;
+}
+
+
+button:hover {
+
+    opacity: 0.85;
+}
+
+
+button:active {
+
+    transform: translateY(1px);
+}
+
+
+/* =========================================
+   PRIMARY BUTTON
+========================================= */
+
+.primary-button {
+
+    background: var(--primary-color);
+
+    color: white;
+}
+
+
+.primary-button:hover {
+
+    background: var(--primary-hover);
+
+    opacity: 1;
+}
+
+
+/* =========================================
+   DASHBOARD GRID
+========================================= */
+
+.dashboard-grid {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 10px;
+}
+
+
+/* =========================================
+   GENERAL CONTENT CARD
+========================================= */
+
+.dashboard-grid > .card {
+
+    min-height: 130px;
+
+    padding: 13px;
+}
+
+
+h2 {
+
+    margin-bottom: 11px;
+
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================
+   TIMER
+========================================= */
+
+.timer-card {
+
+    text-align: center;
+}
+
+
+.timer-card h2 {
+
+    text-align: center;
+}
+
+
+.timer {
+
+    margin-bottom: 11px;
+
+    color: var(--primary-color);
+
+    font-size: 31px;
+
+    line-height: 1;
+}
+
+
+.timer-buttons {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 6px;
+}
+
+
+/* =========================================
+   TASK FORM
+========================================= */
+
+.task-form {
+
+    display: flex;
+
+    gap: 5px;
+
+    margin-bottom: 4px;
+}
+
+
+.task-form input {
+
+    flex: 1;
+
+    min-width: 0;
+}
+
+
+/* =========================================
+   MESSAGE
+========================================= */
+
+.message {
+
+    min-height: 12px;
+
+    margin-bottom: 2px;
+
+    font-size: 8px;
+
+    color: var(--danger-color);
+}
+
+
+/* =========================================
+   TASK LIST
+========================================= */
+
+.task-list {
+
+    list-style: none;
+
+    padding: 0;
+
+    margin: 0;
+}
+
+
+/* =========================================
+   TASK ITEM
+========================================= */
+
+.task-item {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 5px;
+
+    min-height: 27px;
+
+    font-size: 10px;
+
+    border-bottom: 1px solid rgba(128, 128, 128, 0.12);
+}
+
+
+.task-left {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    min-width: 0;
+
+    flex: 1;
+}
+
+
+.task-checkbox {
+
+    width: 12px;
+
+    height: 12px;
+
+    flex-shrink: 0;
+
+    accent-color: var(--primary-color);
+}
+
+
+.task-text {
+
+    overflow-wrap: anywhere;
+}
+
+
+.task-text.completed {
+
+    color: var(--secondary-text);
+
+    text-decoration: line-through;
+}
+
+
+/* =========================================
+   TASK ACTIONS
+========================================= */
+
+.task-actions {
+
+    display: flex;
+
+    gap: 3px;
+
+    flex-shrink: 0;
+}
+
+
+.edit-button {
+
+    background: #7b8be3;
+
+    color: white;
+
+    padding: 3px 6px;
+
+    font-size: 8px;
+}
+
+
+.delete-button {
+
+    background: var(--danger-color);
+
+    color: white;
+
+    padding: 3px 6px;
+
+    font-size: 8px;
+}
+
+
+.delete-button:hover {
+
+    background: var(--danger-hover);
+
+    opacity: 1;
+}
+
+
+/* =========================================
+   EDIT INPUT
+========================================= */
+
+.edit-input {
+
+    flex: 1;
+
+    height: 20px;
+
+    font-size: 9px;
+}
+
+
+/* =========================================
+   QUICK LINKS CARD
+========================================= */
+
+.links-card {
+
+    grid-column: 1;
+}
+
+
+/* =========================================
+   LINK FORM
+========================================= */
+
+.link-form {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        1fr
+        auto;
+
+    gap: 5px;
+
+    margin-bottom: 9px;
+}
+
+
+/* =========================================
+   QUICK LINKS
+========================================= */
+
+.quick-links {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 5px;
+}
+
+
+/* =========================================
+   QUICK LINK
+========================================= */
+
+.quick-link {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    background: var(--primary-color);
+
+    color: white;
+
+    border-radius: 4px;
+
+    padding: 6px 10px;
+
+    font-size: 9px;
+
+    text-decoration: none;
+}
+
+
+.quick-link:hover {
+
+    background: var(--primary-hover);
+}
+
+
+/* =========================================
+   REMOVE LINK
+========================================= */
+
+.remove-link {
+
+    padding: 0;
+
+    background: transparent;
+
+    color: rgba(255, 255, 255, 0.8);
+
+    font-size: 10px;
+}
+
+
+.remove-link:hover {
+
+    opacity: 1;
+
+    color: white;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .dashboard {
+
+        width: 94%;
+
+        margin: 12px auto;
+    }
+
+
+    .dashboard-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .links-card {
+
+        grid-column: auto;
+    }
+
+
+    .link-form {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .header-card {
+
+        min-height: 125px;
+    }
+
+
+    .task-item {
+
+        align-items: flex-start;
+
+        padding: 5px 0;
+    }
+
+
+    .task-actions {
+
+        flex-direction: column;
+    }
+
+}
